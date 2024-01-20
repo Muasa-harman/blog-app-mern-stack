@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.5",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.12",
     "@reduxjs/toolkit": "^2.0.1",
     "coffeescript": "^2.7.0",
     "firebase": "^10.7.2",
@@ -23,7 +27,8 @@
     "react-router-dom": "^6.21.3",
     "react-toastify": "^10.0.3",
     "redux-persist": "^6.0.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.2",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

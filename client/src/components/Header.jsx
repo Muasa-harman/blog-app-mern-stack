@@ -3,10 +3,13 @@ import React from "react";
 import { Link,useLocation } from "react-router-dom";
 import {AiOutlineSearch} from "react-icons/ai"
 import {FaMoon} from "react-icons/fa"
+import {  useSelector } from "react-redux";
+import Menu from "./Menu";
 // import { IoMenuSharp } from "react-icons/io5";
 
 export const Header = () => {
   const path = useLocation().pathname;
+  const {currentUser} = useSelector(state => state.user)
   return (
     <header className="border-b-2 p-3 flex items-center justify-between">
       <Link
@@ -25,11 +28,14 @@ export const Header = () => {
         <button className="w-12 h-10 lg:hidden"  text="gray"><AiOutlineSearch pill="true" className="w-6 h-6"/></button>
         <div className="flex gap-2 items-center md:order-2">
           <button className="w-12 h-10 hidden items-center sm:inline" ><FaMoon className="w-6 h-6" pill="true"/></button>
-          <Link to="sign-in"  >
-            <button className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
-              Sign-In
-            </button>
-          </Link>
+          {currentUser? (<Menu/>):(
+
+            <Link to="/sign-in"  >
+              <button className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
+                Sign-In
+              </button>
+            </Link>
+          )}
           {/* Navbar-toggle */}
         </div>
           <nav className="flex items-center justify-evenly">
