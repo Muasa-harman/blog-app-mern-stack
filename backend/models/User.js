@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    profilePicture:{
+        type:String,
+        default: "https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg",
+    }
 },{timestamps: true});
 
 const User = mongoose.model("User", userSchema);

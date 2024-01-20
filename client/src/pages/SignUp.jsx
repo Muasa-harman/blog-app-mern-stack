@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Oauth from "../components/Oauth";
 
 export const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -98,6 +99,7 @@ export const SignUp = () => {
             >
               {loading? ("Loading...") :"Sign Up"}
             </button>
+            <Oauth/>
           </form>
           <div className="flex gap-2 text-sm mt-3">
             <span className="">Have an account?</span>
