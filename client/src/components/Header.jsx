@@ -28,7 +28,7 @@ export const Header = () => {
         <button className="w-12 h-10 lg:hidden"  text="gray"><AiOutlineSearch pill="true" className="w-6 h-6"/></button>
         <div className="flex gap-2 items-center md:order-2">
           <button className="w-12 h-10 hidden items-center sm:inline" ><FaMoon className="w-6 h-6" pill="true"/></button>
-          {currentUser? (<Menu/>):(
+          {currentUser? (<Menu />):(
 
             <Link to="/sign-in"  >
               <button className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
