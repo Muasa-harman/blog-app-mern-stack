@@ -57,10 +57,10 @@ export const SignUp = () => {
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div>
-              <label value="">
+              <label value="" className="flex flex-col gap-3">
                 Your username
                 <input
-                  className="p-2"
+                  className="p-2 border-2"
                   type="text"
                   placeholder="Username"
                   id="username"
@@ -69,10 +69,10 @@ export const SignUp = () => {
               </label>
             </div>
             <div className="">
-              <label value="">
+              <label value="" className="flex flex-col gap-3">
                 Your email
                 <input
-                  className="p-2"
+                  className="p-2 border-2"
                   type="email"
                   placeholder="name@user.com"
                   id="email"
@@ -81,10 +81,10 @@ export const SignUp = () => {
               </label>
             </div>
             <div className="">
-              <label value="">
+              <label value="" className="flex flex-col gap-3">
                 Password
                 <input
-                  className="p-2"
+                  className="p-2 border-2"
                   type="password"
                   placeholder="Password"
                   id="password"

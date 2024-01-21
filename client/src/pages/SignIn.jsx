@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
-import { signInSucess,signInStart,signInFailure } from "../redux/user/userSlice";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  signInSucess,
+  signInStart,
+  signInFailure,
+} from "../redux/user/userSlice";
 import Oauth from "../components/Oauth";
 
 export const SignIn = () => {
   const [formData, setFormData] = useState({});
-  const {loading,error: errorMessage} = useSelector(state => state.user);
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const { loading, error: errorMessage } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
@@ -18,7 +22,7 @@ export const SignIn = () => {
       return dispatch(signInFailure("Please fill out all fields"));
     }
     try {
-     dispatch(signInStart());
+      dispatch(signInStart());
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -28,7 +32,7 @@ export const SignIn = () => {
       if (data.success === false) {
         dispatch(signInFailure(data.message));
       }
-      if(res.ok){
+      if (res.ok) {
         dispatch(signInSucess(data));
         navigate("/");
       }
@@ -54,12 +58,11 @@ export const SignIn = () => {
 
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            
             <div className="">
-              <label value="">
+              <label value="" className="flex flex-col gap-3">
                 Your email
                 <input
-                  className="p-2"
+                  className="p-2 border-2"
                   type="email"
                   placeholder="name@user.com"
                   id="email"
@@ -68,10 +71,10 @@ export const SignIn = () => {
               </label>
             </div>
             <div className="">
-              <label value="">
+              <label value="" className="flex flex-col gap-3">
                 Password
                 <input
-                  className="p-2"
+                  className="p-2 border-2"
                   type="password"
                   placeholder="Password"
                   id="password"
@@ -84,9 +87,9 @@ export const SignIn = () => {
               disabled={loading}
               className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white p-2"
             >
-              {loading? ("Loading...") :"Sign In"}
+              {loading ? "Loading..." : "Sign In"}
             </button>
-            <Oauth/>
+            <Oauth />
           </form>
           <div className="flex gap-2 text-sm mt-3">
             <span className="">Dont Have an account?</span>
