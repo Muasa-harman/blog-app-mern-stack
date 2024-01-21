@@ -18,7 +18,7 @@ const DashSidebar = () => {
       <div className="mt-5 bg-gray-300">
         <Link to="/dashboard?tab=profile">
           <span
-            active={tab === "profile"}
+            // active={tab === "profile"}
             className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiUser />
