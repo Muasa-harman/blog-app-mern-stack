@@ -10,9 +10,9 @@ export const Dashboard = () => {
     const urlParams = new URLSearchParams(location.search)
     const tabFromUrl = urlParams.get('tab')
     if(tabFromUrl){
-      setTab(tabFromUrl)
+      setTab(tabFromUrl);
     }
-  },[location.search])
+  },[location.search]);
   return (
     <div className='min-h-screen flex flex-col md:flex-row'>
     <div className='bg-gray-300 md:w-56'>

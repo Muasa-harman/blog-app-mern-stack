@@ -1,4 +1,3 @@
-import { Input } from "postcss";
 import React from "react";
 import { Link,useLocation } from "react-router-dom";
 import {AiOutlineSearch} from "react-icons/ai"
@@ -10,10 +9,10 @@ import { toggleTheme } from "../redux/theme/themeSlice";
 
 export const Header = () => {
   const path = useLocation().pathname;
-  const {currentUser} = useSelector(state => state.user)
-  const {theme} = useSelector(state=> state.theme)
-  const dispatch = useDispatch()
-  console.log("toggleTheme")
+  const {currentUser} = useSelector(state => state.user);
+  const {theme} = useSelector(state=> state.theme);
+  const dispatch = useDispatch();
+
   return (
     <header className="border-b-2 p-3 flex items-center justify-between">
       <Link
@@ -30,8 +29,8 @@ export const Header = () => {
         </div>
         </form>
         <button className="w-12 h-10 lg:hidden"  text="gray"><AiOutlineSearch pill="true" className="w-6 h-6"/></button>
-        <div className="flex gap-2 items-center md:order-2" onClick={()=>dispatch(toggleTheme())}>
-          <button className="w-12 h-10 hidden items-center sm:inline" >{theme === 'light' ? <FaSun /> : <FaMoon  className="w-6 h-6" pill="true"/>}</button>
+        <div className="flex gap-2 items-center md:order-2" >
+          <button onClick={()=>dispatch(toggleTheme())} className="w-12 h-10 hidden items-center sm:inline" >{theme === 'light' ? <FaSun /> : <FaMoon  className="w-6 h-6" pill="true"/>}</button>
           {currentUser? (<Menu />):(
 
             <Link to="/sign-in"  >
