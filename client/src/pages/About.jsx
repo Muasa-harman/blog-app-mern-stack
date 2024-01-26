@@ -1,7 +1,11 @@
 import React from 'react'
+import Modal from '../components/Modal'
 
 export const About = () => {
   return (
-    <div className=''>About</div>
+    <div className=''>
+      About
+      <Modal/>
+    </div>
   )
 }

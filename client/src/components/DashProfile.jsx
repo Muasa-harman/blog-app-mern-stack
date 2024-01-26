@@ -14,6 +14,7 @@ import {
   updateSuccess,
   updateFailure,
 } from "../redux/user/userSlice";
+import Modal from "./Modal";
 
 const DashProfile = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -25,6 +26,7 @@ const DashProfile = () => {
   const [updateUserSucess,setUpdateUserSuccess] = useState(null);
   const [updateUserError,setUpdateUserError] = useState(null);
   const [formData, setFormData] = useState({});
+  // const [showModal,setShowModal] = useState(false);
   const filePickerRef = useRef();
   const dispatch = useDispatch();
 
@@ -213,11 +215,12 @@ const DashProfile = () => {
         </button>
       </form>
       <div className="text-red-500 flex justify-between mt-5">
-        <span className="cursor-pointer">Delete Account</span>
+        <span onClick={()=>setShowModal(true)}  className="cursor-pointer"><Modal/></span>
         <span className="cursor-pointer">Sign Out</span>
       </div>
       {updateUserSucess && (<span className="text-green-500">{updateUserSucess}</span>)}
       {updateUserError && (<span className="text-red-500">{updateUserError}</span>)}
+      {/* {showModal && (<Modal shos={showModal} onClose={()=>setFormData(false)}/>)} */}
     </div>
   );
 };
