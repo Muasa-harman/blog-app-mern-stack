@@ -79,7 +79,7 @@ export const google = async(req,res,next) =>{
        res.status(200).cookie('access_token', token, {
         httpOnly: true,
        })
-       .json({message: "successfully registered",rest});
+       .json({message: "successfully registered",rest,token});
     }
    } catch (error) {
     
