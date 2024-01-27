@@ -22,11 +22,12 @@ const DashProfile = () => {
   const [imageFileUrl, setImageFileUrl] = useState(null);
   const [imageFileUploadError, setImageFileUploadError] = useState(null);
   const [imageFileUploadProgress, setImageFileUploadProgress] = useState(null);
-  const [imageFileUploading,setImageFileUploading] = useState(false);
-  const [updateUserSucess,setUpdateUserSuccess] = useState(null);
-  const [updateUserError,setUpdateUserError] = useState(null);
+  const [imageFileUploading, setImageFileUploading] = useState(false);
+  const [updateUserSucess, setUpdateUserSuccess] = useState(null);
+  const [updateUserError, setUpdateUserError] = useState(null);
   const [formData, setFormData] = useState({});
-  // const [showModal,setShowModal] = useState(false);
+  // const [showModal,setShowModal] = useState(false)
+  const [showModal,setShowModal] = useState(false);
   const filePickerRef = useRef();
   const dispatch = useDispatch();
 
@@ -72,15 +73,15 @@ const DashProfile = () => {
           "Could not upload iamge (File must be less 2MB)"
         );
         setImageFileUploadProgress(null);
-        setImageFileUrl(downloadULR);
+        // setImageFileUrl(downloadURL);
         setImageFile(null);
         setImageFileUrl(null);
         setImageFileUploading(false);
       },
       () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadULR) => {
-          setImageFileUrl(downloadULR);
-          setFormData({ ...formData, profilePicture: downloadULR });
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImageFileUrl(downloadURL);
+          setFormData({ ...formData, profilePicture: downloadURL });
           setImageFileUploading(false);
         });
       }
@@ -91,25 +92,23 @@ const DashProfile = () => {
     // onChange = {handleChange};
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { 
     e.preventDefault();
     setUpdateUserError(null);
     setUpdateUserSuccess(null);
     if (Object.keys(formData).length === 0) {
-      setUpdateUserError('No change made');
+      setUpdateUserError("No change made");
       return;
     }
-    if(imageFileUploading){
-      setUpdateUserError('Please wait for image to upload');
+    if (imageFileUploading) {
+      setUpdateUserError("Please wait for image to upload");
       return;
     }
     try {
       dispatch(updateStart());
-      const res = await fetch(`/api/user/update/${currentUser._id}`, {
+      const res = await fetch(`/api/user/update/${currentUser._id}`,{
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: {"Content-Type":"application/json"},
         body: JSON.stringify(formData),
       });
       const data = await res.json();
@@ -125,6 +124,9 @@ const DashProfile = () => {
       setUpdateUserError(error.message);
     }
   };
+  // console.log('currentUser._Id',currentUser.rest._id)
+  // console.log('currentUser',currentUser)
+  // console.log('formData', formData)
   return (
     <div className="max-w-lg mx-auto p-3 w-full">
       <h1 className="my-7 text-center font-semibold text-3xl">Profile</h1>
@@ -215,11 +217,17 @@ const DashProfile = () => {
         </button>
       </form>
       <div className="text-red-500 flex justify-between mt-5">
-        <span onClick={()=>setShowModal(true)}  className="cursor-pointer"><Modal/></span>
+        <span onClick={() => setShowModal(showModal)} className="cursor-pointer">
+          <Modal />
+        </span>
         <span className="cursor-pointer">Sign Out</span>
       </div>
-      {updateUserSucess && (<span className="text-green-500">{updateUserSucess}</span>)}
-      {updateUserError && (<span className="text-red-500">{updateUserError}</span>)}
+      {updateUserSucess && (
+        <span className="text-green-500">{updateUserSucess}</span>
+      )}
+      {updateUserError && (
+        <span className="text-red-500">{updateUserError}</span>
+      )}
       {/* {showModal && (<Modal shos={showModal} onClose={()=>setFormData(false)}/>)} */}
     </div>
   );
