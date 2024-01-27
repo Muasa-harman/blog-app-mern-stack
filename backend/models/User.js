@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema({
     profilePicture:{
         type:String,
         default: "https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg",
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false,
     }
 },{timestamps: true});
 
