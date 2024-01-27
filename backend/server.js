@@ -2,7 +2,8 @@ import express from "express"
 import mongoose from "mongoose"
 import "dotenv/config"
 import userRoutes from "./routes/user.js";
-import authRoutes from "./routes/auth.js"
+import authRoutes from "./routes/auth.js";
+import postRoutes from "./routes/post.js";
 import path from "path"
 import cookieParser from "cookie-parser";
 
@@ -23,6 +24,7 @@ const __dirname = path.resolve();
 
 app.use("/api/auth", authRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/post', postRoutes);
 
 app.use((error,req,res,next)=>{
     const statusCode = error.statusCode || 500 ;

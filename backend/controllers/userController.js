@@ -25,7 +25,7 @@ export const updateUser = async(req, res, next) => {
     if (req.body.username !== req.body.username.toLowerCase()) {
       return next(errorHandler(400, "Username must be lowercase"));
     }
-    // if (!req.body.username.match(/[a-A-0-9]+$/)) {
+    // if (!req.body.username.match(/[^a-A-0-9]+$/)) {
     //   return next(
     //     errorHandler(400, "username can only contain letters and numbers")
     //   );
@@ -69,5 +69,5 @@ export const signout = async(req,res,next) =>{
     res.clearCookie('access_token').status(200).json('User has been signed out');
   } catch (error) {
     next(error);
-  }
+  }Z
 }
