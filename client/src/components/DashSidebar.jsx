@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { HiArrowSmRight, HiUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { signoutSuccess } from "../redux/user/userSlice";
 
 const DashSidebar = () => {
   const Location = useLocation();
   const [tab, setTab] = useState("");
+  // const {curreUser} = useSelector((state) => state.user)
+  const dispatch = useDispatch()
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const tabFromUrl = urlParams.get("tab");
@@ -13,6 +17,22 @@ const DashSidebar = () => {
       setTab(tabFromUrl);
     }
   }, [location.search]);
+
+  const handleSignout = async() =>{
+    try {
+      const res = await fetch('/api/user/signout', {
+        method: 'POST',
+      });
+      const data = await res.json();
+      if(!res.ok){
+        console.log(data.message);
+      } else {
+        dispatch(signoutSuccess());
+      }
+    } catch (error) {
+      
+    }
+  }
   return (
     <div className="bg-gray-300 w-full">
       <div className="mt-5 bg-gray-300">
@@ -27,7 +47,7 @@ const DashSidebar = () => {
           </span>
         </Link>
 
-        <span className="flex cursor-pointer p-3 gap-3 hover:bg-white bg-gray-200 w-52 items-center">
+        <span onClick={handleSignout} className="flex cursor-pointer p-3 gap-3 hover:bg-white bg-gray-200 w-52 items-center">
           <HiArrowSmRight />
           Log Out <br />
         </span>

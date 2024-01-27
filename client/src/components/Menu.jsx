@@ -1,8 +1,25 @@
 import React from 'react'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import {  useSelector } from "react-redux";
+import { signoutSuccess } from '../redux/user/userSlice';
+import {  useSelector,useDispatch } from "react-redux";
+
 
 const Menu = () => {
+  const dispatch = useDispatch()
+  const handleSignout = async() =>{
+    try {
+      const res = await fetch('/api/user/signout', {
+        method: 'POST',
+      });
+      const data = await res.json();
+      if(!res.ok){
+        console.log(data.message);
+      } else {
+        dispatch(signoutSuccess());
+      }
+    } catch (error) {
+      
+    }
+  }
   const {currentUser} = useSelector(state => state.user)
   return (
     <div className='group relative mr-10'>
@@ -12,7 +29,7 @@ const Menu = () => {
       <a className="block px-4 py-3 text-black no-underline transition duration-300 hover:bg-gray-300 text-sm font-medium truncate" href="#">{currentUser.email}</a>
       <a className="block px-4 py-3 text-black no-underline transition duration-300 hover:bg-gray-300" href="/dashboard?tab=profile">Profile</a>
       <div className="">
-      <a className="block px-4 py-3 text-black no-underline transition duration-300 hover:bg-gray-300 text-sm font-medium truncate" href="#">Sign Out</a>
+      <a onClick={handleSignout} className="block px-4 py-3 text-black no-underline transition duration-300 hover:bg-gray-300 text-sm font-medium truncate" href="#">Sign Out</a>
       </div>
     </div>
   </div> 

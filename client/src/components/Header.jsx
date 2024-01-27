@@ -13,6 +13,8 @@ export const Header = () => {
   const {theme} = useSelector(state=> state.theme);
   const dispatch = useDispatch();
 
+  
+
   return (
     <header className="border-b-2 p-3 flex items-center justify-between">
       <Link
