@@ -92,7 +92,11 @@ const handleSubmit = async(e) =>{
             required
             id="title"
             className="flex-1 p-3 border"
-            onChange={(e)=>setFormData({...formData,title: e.target.value})}
+            onChange={(e)=>{
+              console.log("Title changed:", e.target.value);
+              setFormData({...formData,title:e.target.value})
+            }}
+              
           />
           <select className="border rounded p-2 text-gray-700 font-normal"
           onChange={(e)=>setFormData({...formData, category:e.target.value})}
@@ -154,7 +158,7 @@ const handleSubmit = async(e) =>{
           placeholder="Write something ..."
           className="h-72 mb-12"
           required
-          onChange={(value)=>{setFormData({...formData,content:value});}}
+          onChange={(value,delta,source)=>{setFormData({...formData,content:value});}}
         />
         <button
           className="bg-gradient-to-r p-2 w-full focus:outline from-gray-800 via-slate-500 to-gray-800 rounded-lg text-white"
