@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import PstModal from "./PstModal"
 
 export const DashPosts = () => {
   const { currentUser } = useSelector((state) => state.user);
   const [userPosts, setUserPosts] = useState([]);
   const [showMore,setShowMore] = useState(true);
+  const [showModal,setShowModal] = useState(false);
   console.log(userPosts);
   useEffect(() => {
     const fetchPosts = async () => {
@@ -38,7 +40,7 @@ export const DashPosts = () => {
         }
       }
     } catch (error) {
-      console.log(error.message)
+      // console.log(error.message)
     }
   }
   return (
@@ -61,11 +63,11 @@ export const DashPosts = () => {
             {userPosts.map((post, index) => (
               <tbody className="divide-y">
                 <tr
-                  className="bgwhite dark:border-gray-700 dark:bg-gray-800"
+                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
                   key={index}
                 >
                   <td>{new Date(post.updatedAt).toLocaleDateString()}</td>
-                  <td>
+                  <td key={index}>
                     <Link to={`/post/${post.slug}`}>
                       <img
                         src={post.image}
@@ -86,8 +88,8 @@ export const DashPosts = () => {
                     <Link to={`/post/${post.slug}`}>{post.category}</Link>
                   </td>
                   <td>
-                    <span className="font-medium text-red-500 hover:underline">
-                      Delete
+                    <span onClick={()=>{}} className="font-medium text-red-500 hover:underline">
+                    <PstModal post={post._id}/>
                     </span>
                   </td>
                   <td>
