@@ -21,10 +21,10 @@ const Modal = ({post}) => {
     setModalOpen(false);
     setPostIdToDelete(post && post._id);
     try {
-      const res = await fetch(`/api/user/deletepost/${postIdToDelete}/${currentUser._id}`,{
+      const res = await fetch(`/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,{
         method: 'DELETE',
       });
-    //   const data = await res.json();
+      const data = await res.json();
       if(res.ok){
         console.log(data.message);
       }else{

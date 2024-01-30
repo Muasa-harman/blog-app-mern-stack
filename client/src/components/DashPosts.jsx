@@ -61,7 +61,7 @@ export const DashPosts = () => {
               </tr>
             </thead>
             {userPosts.map((post, index) => (
-              <tbody className="divide-y">
+              <tbody key={index} className="divide-y">
                 <tr
                   className="bg-white dark:border-gray-700 dark:bg-gray-800"
                   key={index}
