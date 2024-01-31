@@ -79,6 +79,14 @@ const CommentSection = ({ postId }) => {
       }
     } catch (error) {}
   };
+
+  const handleEdit = async (comment, editedContent) => {
+    setComments(
+      comments.map((c) => {
+        c.id === comment._id ? { ...c, content: editedContent } : c;
+      })
+    );
+  };
   return (
     <div className="max-w-2xl mx-auto w-full p-3">
       {currentUser ? (
@@ -143,8 +151,13 @@ const CommentSection = ({ postId }) => {
               <p className="">{comments.length}</p>
             </div>
           </div>
-          {comments.map((comment) => (
-            <Comment key={comment._id} comment={comment} onLike={handleLike} />
+          {comments.map((comment,) => (
+            <Comment
+              key={comment._id}
+              comment={comment}
+              onLike={handleLike}
+              onEdit={handleEdit}
+            />
           ))}
         </>
       )}
