@@ -24,6 +24,11 @@ const postSchema = new mongoose.Schema({
     required: true,
     uniques: true,
   },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 },{timestamps: true});
 
 const Post = mongoose.model('Post', postSchema);
