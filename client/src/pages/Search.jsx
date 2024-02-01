@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { json, useLocation,useNavigate } from "react-router-dom";
 import PostCard from "../components/PostCard";
+import { SpinnerCircular } from 'spinners-react';
 
 const Search = () => {
   const [sidebarData, setSidebarData] = useState({
@@ -140,7 +141,7 @@ const Search = () => {
         <div className="p-7 flex flex-wrap gap-4">
             {!loading && posts.length === 0 && (<p className="text-xl text-gray-400">No results found</p>)}
             {
-                loading &&( <p className="text-xl text-gray-500">Loading...</p>)
+                loading &&( <p className="text-xl text-gray-500"><SpinnerCircular /></p>)
             }
             {
                 !loading && posts && posts.map((post)=>(
