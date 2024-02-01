@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { HiArrowSmRight, HiDocumentText, HiOutlineUserGroup, HiUser } from "react-icons/hi";
+import { HiAnnotation, HiArrowSmRight, HiDocumentText, HiOutlineUserGroup, HiUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signoutSuccess } from "../redux/user/userSlice";
@@ -60,6 +60,7 @@ const DashSidebar = () => {
         )}
 
 {currentUser.isAdmin && (
+  <>
         <Link to="/dashboard?tab=users">
           <span
             // active={tab === "profile"}
@@ -70,6 +71,19 @@ const DashSidebar = () => {
             {/* <span className="bg-slate-300 text-white">User</span> */}
           </span>
         </Link>   
+
+        <Link to="/dashboard?tab=comments">
+          <span
+            // active={tab === "profile"}
+            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+          >
+            <HiAnnotation />
+            Comments <br />
+            {/* <span className="bg-slate-300 text-white">User</span> */}
+          </span>
+        </Link>   
+  
+  </>
         )}
 
 
