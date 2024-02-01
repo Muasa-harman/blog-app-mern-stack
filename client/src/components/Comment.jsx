@@ -3,12 +3,11 @@ import moment from "moment";
 import { FaThumbsUp } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
-const Comment = ({ comment, onLike,onEdit }) => {
+const Comment = ({ comment, onLike, onEdit,onDelete }) => {
   const { currentUser } = useSelector((state) => state.user);
   const [user, setUser] = useState({});
   const [editedContent, setEditedContent] = useState(comment.conted);
   const [isEditing, setIsEditing] = useState(false);
-  console.log(user);
 
   useEffect(() => {
     const getUser = async () => {
@@ -30,25 +29,25 @@ const Comment = ({ comment, onLike,onEdit }) => {
     setEditedContent(comment.content);
   };
 
-  const handleSave = async() =>{
+  const handleSave = async () => {
     try {
-      const res = await fetch(`/api/comment/editComment/${comment._id}`,{
-        method: 'PUT',
+      const res = await fetch(`/api/comment/editComment/${comment._id}`, {
+        method: "PUT",
         headers: {
-          'Content-Type' : 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          content: editedContent
-        })
+          content: editedContent,
+        }),
       });
-      if(res.ok){
+      if (res.ok) {
         setIsEditing(false);
         onEdit(comment, editedContent);
       }
     } catch (error) {
       console.log(error);
     }
-  }
+  };
   return (
     <div className="flex p-4 border-b dark:border-gray-600 text-sm">
       <div className="flex-shrink-0 mr-3">
@@ -87,7 +86,7 @@ const Comment = ({ comment, onLike,onEdit }) => {
                 type="button"
                 size="sm"
                 className="rounded-lg  p-2 outline"
-                onClick={()=>setIsEditing(false)}
+                onClick={() => setIsEditing(false)}
               >
                 Cancel
               </button>
@@ -116,13 +115,23 @@ const Comment = ({ comment, onLike,onEdit }) => {
               </p>
               {currentUser &&
                 (currentUser._id === comment.userId || currentUser.isAdmin) && (
-                  <button
-                    onClick={handleEdit}
-                    type="button"
-                    className="text-gray-400 hover:text-blue-400"
-                  >
-                    Edit
-                  </button>
+                  <>
+                    <button
+                      onClick={handleEdit}
+                      type="button"
+                      className="text-gray-400 hover:text-blue-400"
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      onClick={()=>onDelete(comment._id)}
+                      type="button"
+                      className="text-gray-400 hover:text-red-400"
+                    >
+                      Delete
+                    </button>
+                  </>
                 )}
             </div>
           </>
