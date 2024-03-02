@@ -9,8 +9,8 @@ const CallToAction = () => {
         <button className="rounded-bl-none bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white p-2"> <a  href="/myprojects" target="_blank" rel="noopener noreferrer">My Javascript/Typescript && django Projects</a></button>
       </div>
       <div className="p-7 flex-1">
-        <img
-          src="https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/tin-tuc/151984/Originals/javascript-la-gi%20(2).png"
+        <img className="rounded-full"
+          src="https://media.licdn.com/dms/image/D4D03AQG7BUxHF4I8Tg/profile-displayphoto-shrink_800_800/0/1701194850229?e=1710979200&v=beta&t=_4pcIIxCbUnBBApuuGUFLhqB1ocxGyilNSYQWWXUERU"
         />
       </div>
     </div>
