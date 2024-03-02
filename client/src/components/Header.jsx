@@ -44,8 +44,8 @@ export const Header = () => {
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semi-bold dark:text-white"
       >
-        <span className="px-2 py-1 bg-gradient-to-r from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
-          Donfiles
+        <span className="px-2 py-1 bg-gradient-to-r from-gray-500 via-slate-500 to-gray-400 rounded-lg text-white">
+          Harman Muasa
         </span>
         Blog
       </Link>
@@ -79,7 +79,7 @@ export const Header = () => {
           <Menu />
         ) : (
           <Link to="/sign-in">
-            <button className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
+            <button className="bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-400 rounded-lg text-white">
               Sign-In
             </button>
           </Link>

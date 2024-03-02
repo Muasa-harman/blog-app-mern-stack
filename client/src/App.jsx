@@ -14,6 +14,7 @@ import UpdatePost from "./pages/UpdatePost"
 import PostPage from "./pages/PostPage"
 import ScrollToTop from "./components/ScrollToTop"
 import Search from "./pages/Search"
+import ProjectsPage from "./pages/ProjectsPage"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/update-post/:postId" element={<UpdatePost/>}/>
         </Route>
         <Route path="/projects" element={<Projects/>}/>
+        <Route path="/myprojects" element={<ProjectsPage/>}/>
         <Route path="/post/:postSlug" element={<PostPage/>}/>
       </Routes>
       <Footer/> 
