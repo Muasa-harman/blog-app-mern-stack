@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter} from "react-icons/bs";
+import { BsDribbble, BsFacebook,BsWhatsapp, BsGithub, BsInstagram, BsTwitter} from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -9,23 +9,23 @@ const Footer = () => {
         <div className="grid w-full justify-between sm:flex md:grid-cols-1">
           <div className="mt-5">
           <Link to="/" className="self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white">
-            <span className="px-2 py-1 bg-gradient-to-r from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
-              Donfiles
+            <span className="px-2 py-1 bg-gradient-to-r from-gray-200 via-slate-500 to-gray-400 rounded-lg text-white">
+              Harman Muasa
             </span>
             Blog
           </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
             <div className="">
-              <h3 className="">About</h3>
+              {/* <h3 className="">About</h3> */}
               <div className="flex flex-col">
-              <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
+              {/* <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
               <span className="">portfolio</span>
-              </Link>
-              <Link hrefLang="/about" target='_blank' rel='noopenernoreferrer'>
+              </Link> */}
+              <Link hrefLang="https://myportfolioblogapp.onrender.com/about" target='_blank' rel='noopenernoreferrer'>
               <span className="">About</span>
               </Link>
-              <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
+              <Link hrefLang="https://myportfolioblogapp.onrender.com/" target='_blank' rel='noopenernoreferrer'>
               <span className="">portfolio</span>
               </Link>
               </div>
@@ -67,6 +67,7 @@ const Footer = () => {
             {<BsTwitter/>}
             {<BsGithub/>}
             {<BsDribbble/>}
+            {<BsWhatsapp/>}
           </div>
         </div>
       </div>
