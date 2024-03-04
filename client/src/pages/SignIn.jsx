@@ -45,8 +45,8 @@ export const SignIn = () => {
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
         <div className="">
           <Link to="/" className="font-bold dark:text-white text-4xl">
-            <span className="px-2 py-1 bg-gradient-to-r from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white">
-              Donfiles
+            <span className="px-2 py-1 bg-gradient-to-r from-gray-200 via-slate-300 to-gray-400 rounded-lg text-white">
+              Harman Muasa
             </span>
             Blog
           </Link>
