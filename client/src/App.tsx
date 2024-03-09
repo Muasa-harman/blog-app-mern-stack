@@ -1,20 +1,20 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import {Home} from "./pages/Home"
-import {About} from "./pages/About"
-import {SignIn} from "./pages/SignIn"
-import {SignUp} from "./pages/SignUp"
-import {Dashboard} from "./pages/Dashboard"
-import {Projects} from "./pages/Projects"
-import {Header} from "./components/Header"
-import Footer from "./components/Footer"
-import PrivateRoute from "./components/PrivateRoute"
-import OnlyAdminPrivateRoute from "./components/OnlyAdminPrivateRoute"
-import CreatePost from "./pages/CreatePost"
-import UpdatePost from "./pages/UpdatePost"
-import PostPage from "./pages/PostPage"
-import ScrollToTop from "./components/ScrollToTop"
-import Search from "./pages/Search"
-import ProjectsPage from "./pages/ProjectsPage"
+import ScrollToTop from "@src/components/ScrollToTop";
+import {Header} from "@src/components/Header";
+import {Home} from "@src/pages/Home";
+import {About} from "@src/pages/About";
+import {SignIn} from "@src/pages/SignIn";
+import {SignUp} from "@src/pages/SignUp";
+import Search from "@src/pages/Search";
+import PrivateRoute from "@src/components/PrivateRoute";
+import {Dashboard} from "@src/pages/Dashboard";
+import OnlyAdminPrivateRoute from "@src/components/OnlyAdminPrivateRoute";
+import CreatePost from "@src/pages/CreatePost";
+import UpdatePost from "@src/pages/UpdatePost";
+import {Projects} from "@src/pages/Projects";
+import ProjectsPage from "@src/pages/ProjectsPage";
+import PostPage from "@src/pages/PostPage";
+import Footer from "@src/components/Footer";
 
 function App() {
 

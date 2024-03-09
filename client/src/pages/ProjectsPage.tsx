@@ -1,11 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import ProjectCard from '../components/ProjectCard.js'
-import Hotel from "../assets/kigali.jpg"
-import Finance from "../assets/dashboard.jpg"
-import Property from "../assets/Listing.jpg"
-import Delivery from "../assets/landing.png"
-import Waste from "../assets/waste.jpg"
+import {Hotel} from "@mui/icons-material";
+import ProjectCard from "@src/components/ProjectCard";
  
 const ProjectsPage = () => {
   return (

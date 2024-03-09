@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { HiAnnotation, HiArrowSmRight, HiChartPie, HiDocumentText, HiOutlineUserGroup, HiUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signoutSuccess } from "../redux/user/userSlice";
+import {signoutSuccess} from "@src/redux/user/userSlice";
 
 const DashSidebar = () => {
   const Location = useLocation();

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Oauth from "../components/Oauth.js";
 
 export const SignUp = () => {
-  const [formData, setFormData] = useState({});
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [formData, setFormData] = useState({
+    username:"",
+    email:"",
+    password:""
+  });
+  const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
   const handleChange = (e) => {
@@ -19,7 +21,6 @@ export const SignUp = () => {
     }
     try {
       setLoading(true);
-      setErrorMessage(null);
       const res = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

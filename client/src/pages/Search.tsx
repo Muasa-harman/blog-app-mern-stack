@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { json, useLocation,useNavigate } from "react-router-dom";
-import PostCard from "../components/PostCard.js";
 import { SpinnerCircular } from 'spinners-react';
+import PostCard from "@src/components/PostCard";
 
 const Search = () => {
   const [sidebarData, setSidebarData] = useState({

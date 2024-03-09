@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import {FaCheck, FaTimes} from 'react-icons/fa'
 
 
 const DashComments = () => {

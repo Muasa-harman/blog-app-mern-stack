@@ -7,14 +7,14 @@ const Card = () => {
     <div className="Card">
       <div className="cardB">
         <div className="cardC">
-          <did className="cardD">
+          <div className="cardD">
             <div className="cardE">
               <h3 className="cardF">Total Nursery</h3>
               <p className="text-2xl">Trees planted</p>
             </div>
             <h2 className="">material ui</h2>
             {/* <HiArrowNarrowUp className="bg-teal-500 text-white rounded-full text-5xl p-3 shadow-lg" /> */}
-          </did>
+          </div>
           <div className="cardD1">
             <div className="cardE">
               <h3 className="cardF">Total trees survived</h3>

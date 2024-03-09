@@ -9,13 +9,6 @@ import {
 import { app } from "../firebase";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import {
-  updateStart,
-  updateSuccess,
-  updateFailure,
-  signoutSuccess
-} from "../redux/user/userSlice";
-import Modal from "./Modal";
 import {Link }from 'react-router-dom'
 
 const DashProfile = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CallToAction from '../components/CallToAction.js'
-import PostCard from "../components/PostCard.js"
+import CallToAction from "@src/components/CallToAction";
+import PostCard from "@src/components/PostCard";
 
 export const Home = () => {
   const [posts,setPosts] = useState([]);

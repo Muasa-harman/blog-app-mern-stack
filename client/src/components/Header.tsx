@@ -3,9 +3,8 @@ import { Link, useLocation,useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import Menu from "./Menu";
-import { toggleTheme } from "../redux/theme/themeSlice";
-// import { IoMenuSharp } from "react-icons/io5";
+import {toggleTheme} from "@src/redux/theme/themeSlice";
+import Menu from "@src/components/Menu";
 
 export const Header = () => {
   const path = useLocation().pathname;

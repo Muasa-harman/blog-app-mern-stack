@@ -8,8 +8,8 @@ import {
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const DashbordCpm = () => {
-  const { currentUser } = useSelector((state) => state.user);
+const DashbordCpm = ({props}) => {
+  const { currentUser } = useSelector((state) => props.state.user);
   const [users, setUsers] = useState([]);
   const [comments, setComments] = useState([]);
   const [posts, setPosts] = useState([]);

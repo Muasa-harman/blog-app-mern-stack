@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { signoutSuccess } from '../redux/user/userSlice';
 import {  useSelector,useDispatch } from "react-redux";
+import {signoutSuccess} from "@src/redux/user/userSlice";
 
 
 const Menu = () => {
@@ -16,9 +17,7 @@ const Menu = () => {
       } else {
         dispatch(signoutSuccess());
       }
-    } catch (error) {
-      
-    }
+    } catch (error) { /* empty */ }
   }
   const {currentUser} = useSelector(state => state.user)
   return (

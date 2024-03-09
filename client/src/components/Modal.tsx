@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {HiOutlineExclamationCircle} from 'react-icons/hi'
 import {  useDispatch, useSelector } from 'react-redux';
-import { deleteUserStart,deleteUserSuccess,deleteFailure } from '../redux/user/userSlice';
+import {deleteFailure, deleteUserStart, deleteUserSuccess} from "@src/redux/user/userSlice";
 
 const Modal = () => {
   const [isModalOpen, setModalOpen] = useState(false);
