@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 import ThemeProvider from './components/ThemeProvider.js';
 import App from "./App";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <PersistGate persistor={persistor}>
   <Provider store={store}>
     <ThemeProvider>
