@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../components/ProjectCard.js'
 import Hotel from "../assets/kigali.jpg"
 import Finance from "../assets/dashboard.jpg"
 import Property from "../assets/Listing.jpg"

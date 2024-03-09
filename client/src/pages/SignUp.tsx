@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Oauth from "../components/Oauth";
+import Oauth from "../components/Oauth.js";
 
 export const SignUp = () => {
   const [formData, setFormData] = useState({});

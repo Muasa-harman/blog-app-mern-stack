@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { SpinnerCircular } from "spinners-react";
 import { Link } from "react-router-dom";
-import CallToAction from "../components/CallToAction";
+import CallToAction from "../components/CallToAction.js";
 import CommentSection from "../components/CommentSection";
-import PostCard from "../components/PostCard";
+import PostCard from "../components/PostCard.js";
 
 const PostPage = () => {
   const { postSlug } = useParams();

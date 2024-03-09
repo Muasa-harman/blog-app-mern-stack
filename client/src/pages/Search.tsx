@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { json, useLocation,useNavigate } from "react-router-dom";
-import PostCard from "../components/PostCard";
+import PostCard from "../components/PostCard.js";
 import { SpinnerCircular } from 'spinners-react';
 
 const Search = () => {
