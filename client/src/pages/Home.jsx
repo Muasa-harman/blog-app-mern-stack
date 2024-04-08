@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <div className="">
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold">Welcome to my devs' blog</h1>
+        <h1 className="text-3xl font-bold">Welcome to my developer' blog</h1>
         <p className="text-gray-500 text-xs sm:text-sm">
           Hey, you'll find a variety of articles and tutorials on topics such as
           web development,software engineering, and programming languages.
