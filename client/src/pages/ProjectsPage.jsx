@@ -6,6 +6,7 @@ import Finance from "../assets/dashboard.jpg"
 import Property from "../assets/Listing.jpg"
 import Delivery from "../assets/landing.png"
 import Waste from "../assets/waste.jpg"
+import Dashboard from "../assets/Dashboard.png"
  
 const ProjectsPage = () => {
   return (
@@ -20,6 +21,7 @@ const ProjectsPage = () => {
                 <ProjectCard title={"Food Delivery Application"}  image={Delivery} link={"https://donfiles-online-food-delivery-app.onrender.com"}/>
                 <ProjectCard title={"Waste Management System comming soon!!"}  image={Waste}/>
                 <ProjectCard title={"Work in Progress"}  image={Property}/>
+                <ProjectCard title={"Data Dashboard"}  image={Dashboard} link={"https://savanna-test-beta.vercel.app/"}/>
             </div>
             {/* <Link to={'/search'} className="text-lg text-teal-500 hover:underline text-center">View all posts</Link> */}
             </div>

@@ -23,7 +23,7 @@ const DashbordCpm = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("/api/user/getusers?limit=5");
+        const res = await fetch("/api/user/geysers?limit=5");
         const data = await res.json();
         if (res.ok) {
           setUsers(data.users);
