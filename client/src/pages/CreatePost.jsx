@@ -117,7 +117,7 @@ const handleSubmit = async(e) =>{
               Nestjs
             </option>
             <option value="nest" className=" font-bold">
-              Python
+              Python.
             </option>
           </select>
         </div>
