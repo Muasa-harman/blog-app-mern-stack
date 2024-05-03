@@ -116,6 +116,9 @@ const handleSubmit = async(e) =>{
             <option value="nest" className=" font-bold">
               Nestjs
             </option>
+            <option value="nest" className=" font-bold">
+              Python
+            </option>
           </select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-5">
