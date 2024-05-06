@@ -53,7 +53,7 @@ const PostPage = () => {
   },[]);
 
   if (loading) return;
-  <div className="flex justify-cente items-center min-h-screen">
+  <div className="flex justify-center items-center min-h-screen">
     <SpinnerCircular size="xl" />
   </div>;
 
