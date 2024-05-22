@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CallToAction from '../components/CallToAction'
-import PostCard from "../components/PostCard"
+import CallToAction from '../components/CallToAction';
+import PostCard from "../components/PostCard";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export const Home = () => {
   const [posts,setPosts] = useState([]);
@@ -25,7 +27,7 @@ export const Home = () => {
         </p>
       <Link to='/search' className="text-xs sm:text-sm text-teal-500 font-bold hover:underline">View all posts</Link>
       </div>
-      <div className="p-3 bg-amber-100 dark:bg-slate-700">
+      <div className="flex p-3 bg-amber-100 dark:bg-slate-700">
         <CallToAction/>
       </div>
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
@@ -44,3 +46,5 @@ export const Home = () => {
     </div>
   );
 };
+
+
