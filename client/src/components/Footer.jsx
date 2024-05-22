@@ -34,27 +34,27 @@ const Footer = () => {
             <div className="">
               <h3 className="">Follow us</h3>
               <div className="flex flex-col">
-              <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
+              <a href="https://github.com/Muasa-harman" target="_blank" rel="noopener noreferrer">
               <span className="">Github</span>
-              </Link>
-              <Link hrefLang="/about" target='_blank' rel='noopenernoreferrer'>
-              <span className="">You tube</span>
-              </Link>
-              <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
+              </a>
+              <a href="https://www.youtube.com/channel/UCRl2sxwaaadLzj26XNreurw" target="_blank" rel="noopener noreferrer">
+              <span className="">YouTube</span>
+              </a>
+              <a href="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopener noreferrer'>
               <span className="">LinkedIn</span>
-              </Link>
+              </a>
               </div>
             </div>
 
             <div className="">
               <h3 className="">Legal</h3>
               <div className="flex flex-col">
-              <Link hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopenernoreferrer'>
+              <a hrefLang="https://www.linkedin.com/in/harman-muasa-fullstackdev/" target='_blank' rel='noopener noreferrer'>
               <span className="">Privacy</span>
-              </Link>
-              <Link hrefLang="/about" target='_blank' rel='noopenernoreferrer'>
+              </a>
+              <a hrefLang="/about" target='_blank' rel='noopener noreferrer'>
               <span className="">Terms &amp; Conditions</span>
-              </Link>
+              </a>
               </div>
             </div>
           </div>
@@ -65,7 +65,9 @@ const Footer = () => {
             {<BsFacebook/>}
             {<BsInstagram/>}
             {<BsTwitter/>}
-            {<BsGithub/>}
+            <a href="https://github.com/Muasa-harman" target="_blank" rel="noopener noreferrer">
+            {<BsGithub/>} 
+              </a>
             {<BsDribbble/>}
             {<BsWhatsapp/>}
           </div>
