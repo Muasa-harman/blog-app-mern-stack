@@ -20,7 +20,7 @@ const CallToAction = () => {
         <button className="rounded-bl-none bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white p-2"> <a  href="/myprojects" target="_blank" rel="noopener noreferrer"> Click to View!!!!! My Javascript/Typescript && django Projects</a></button>
       </div>
       <div className="p-2 flex-1">
-        <img className="rounded-full size=10"
+        <img className="rounded-full size=8"
           src="https://media.licdn.com/dms/image/D4D03AQG7BUxHF4I8Tg/profile-displayphoto-shrink_800_800/0/1701194850229?e=1718236800&v=beta&t=nUpzxtiFS_lQffhlmZeobF8DnFht1AuklPYxZ1L4_yA"
           style={{ width: '400px', height: '400px' }}
         />

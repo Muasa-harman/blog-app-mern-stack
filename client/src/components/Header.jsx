@@ -92,7 +92,7 @@ export const Header = () => {
           <Link to="/projects">Projects</Link>
         </div>
         <div className="mr-5 hover:text-slate-800 focus:border-green-500">
-          <Link to="/about">About</Link>
+          <Link to="/about">Canvas Profile</Link>
         </div>
         <div className="ml-5 hover:text-slate-800 focus:border-green-500">
           <Link to="/">Home</Link>
