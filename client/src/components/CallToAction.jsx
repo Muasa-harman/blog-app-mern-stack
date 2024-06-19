@@ -11,9 +11,7 @@ const CallToAction = () => {
 </div>
         </Container>
         <Container>
-<div className="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YwbVu5mVZd0" allowfullscreen></iframe>
-</div>
+
         </Container>
         <h2 className="text-2xl">Want to learn more about Javascript/Typescript? || Python?</h2>
         <p className="text-gray-500 my-2">Checkout these resources with my JavaScript & Typescript Projects and django framework</p>
@@ -21,8 +19,8 @@ const CallToAction = () => {
       </div>
       <div className="p-2 flex-1">
         <img className="rounded-full size=8"
-          src="https://media.licdn.com/dms/image/D4D03AQG7BUxHF4I8Tg/profile-displayphoto-shrink_800_800/0/1701194850229?e=1718236800&v=beta&t=nUpzxtiFS_lQffhlmZeobF8DnFht1AuklPYxZ1L4_yA"
-          style={{ width: '400px', height: '400px' }}
+          src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t39.30808-1/401462089_6946329178807166_8955888725925277191_n.jpg?stp=c0.0.200.200a_dst-jpg_p200x200&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEl2tch92bTMBVxgaEEGcqdG5JGFSgMCZYbkkYVKAwJlq9WIRk5i221Wa71qGf5YqjTFgG068DT_mJYiYfgDyPt&_nc_ohc=SwSew-PFaSgQ7kNvgHe-Clc&_nc_ht=scontent.fnbo13-1.fna&oh=00_AYBOTM_zS18eBoKwWKfW5eoyoy2HfbLLEWNYdZjSyj5Kzw&oe=66791CDB"
+          style={{ width: '300px', height: '300px' }}
         />
       </div>
     </div>
