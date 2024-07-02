@@ -107,11 +107,11 @@ const Search = () => {
               Search Term:
               <input
                 type="text"
-                placeholder="Search Term..."
+                placeholder="Search Term... "
                 id="searchTerm"
                 value={sidebarData.searchTerm}
                 onChange={handleChange}
-                className="border p-2 outline-none"
+                className="border p-2 outline-none text-black"
               />
             </label>
           </div>

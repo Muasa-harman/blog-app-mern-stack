@@ -39,7 +39,7 @@ const DashSidebar = () => {
        {currentUser && currentUser.isAdmin && (<Link to={"/dashboard?tab=dash"}>
        <span
             active={tab === "dash" || !tab}
-            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+            className="flex mb-5 text-black p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiChartPie />
             Dashboard <br />
@@ -48,18 +48,18 @@ const DashSidebar = () => {
         <Link to="/dashboard?tab=profile">
           <span
             // active={tab === "profile"}
-            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+            className="flex mb-5 p-3 gap-4 text-black active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiUser />
             Profile <br />
-            <span className="bg-slate-300 text-white">{currentUser.isAdmin ? 'Admin':'User'}</span>
+            <span className="bg-slate-300 text-black text-black">{currentUser.isAdmin ? 'Admin':'User'}</span>
           </span>
         </Link>
         {currentUser.isAdmin && (
         <Link to="/dashboard?tab=posts">
           <span
             // active={tab === "profile"}
-            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+            className="flex mb-5 p-3 gap-4 active-bg-gray-400 text-black hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiDocumentText />
             Post <br />
@@ -73,7 +73,7 @@ const DashSidebar = () => {
         <Link to="/dashboard?tab=users">
           <span
             // active={tab === "profile"}
-            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+            className="flex mb-5 p-3 gap-4 active-bg-gray-400 text-black hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiOutlineUserGroup />
             Users <br />
@@ -84,7 +84,7 @@ const DashSidebar = () => {
         <Link to="/dashboard?tab=comments">
           <span
             // active={tab === "profile"}
-            className="flex mb-5 p-3 gap-4 active-bg-gray-400 hover:bg-white items-center bg-gray-200 w-52"
+            className="flex mb-5 p-3 gap-4 active-bg-gray-400 text-black hover:bg-white items-center bg-gray-200 w-52"
           >
             <HiAnnotation />
             Comments <br />
@@ -96,7 +96,7 @@ const DashSidebar = () => {
         )}
 
 
-        <span onClick={handleSignout} className="flex cursor-pointer p-3 gap-3 hover:bg-white bg-gray-200 w-52 items-center">
+        <span onClick={handleSignout} className="flex cursor-pointer text-black p-3 gap-3 hover:bg-white bg-gray-200 w-52 items-center">
           <HiArrowSmRight />
           Log Out <br />
         </span>

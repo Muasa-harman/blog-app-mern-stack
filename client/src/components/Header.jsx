@@ -53,7 +53,7 @@ export const Header = () => {
         <div className="flex items-center">
           <input
             type="text"
-            className="outline-none border p-2"
+            className="outline-none border text-black p-2"
             placeholder="Search..."
             value={searchTerm}
             onChange={(e)=>setSearchTerm(e.target.value)}
