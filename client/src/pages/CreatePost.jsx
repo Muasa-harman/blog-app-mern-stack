@@ -91,7 +91,7 @@ const handleSubmit = async(e) =>{
             placeholder="Title"
             required
             id="title"
-            className="flex-1 p-3 border"
+            className="flex-1 p-3 border text-gray-700"
             onChange={(e)=>{
               console.log("Title changed:", e.target.value);
               setFormData({...formData,title:e.target.value})
@@ -117,7 +117,7 @@ const handleSubmit = async(e) =>{
               Nestjs
             </option>
             <option value="nest" className=" font-bold">
-              Python.
+              Python
             </option>
           </select>
         </div>
