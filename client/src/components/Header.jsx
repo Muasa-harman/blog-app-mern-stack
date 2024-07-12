@@ -58,7 +58,7 @@ export const Header = () => {
             value={searchTerm}
             onChange={(e)=>setSearchTerm(e.target.value)}
           />
-          <AiOutlineSearch className="hidden lg:inline w-4 h-4" />
+          <AiOutlineSearch className="hidden lg:inline w-4 h-4 text-black bg-white p-5"/>
       <button type="submit" className="w-12 h-10 lg:hidden" text="gray">
         <AiOutlineSearch pill="true" className="w-6 h-6" />
       </button>
