@@ -39,7 +39,7 @@ export const Header = () => {
   }
   };
   return (
-    <header className="border-b-2 p-3 flex items-center justify-between">
+    <header className="border-b-2 p-3 flex items-center position-sticky  w-full justify-between z-10 ">
       <Link
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semi-bold dark:text-white"
@@ -51,7 +51,7 @@ export const Header = () => {
       </Link>
       <form onSubmit={handleSubmit} className="flex ">
         <div className="flex items-center">
-          {/* <AiOutlineSearch className="hidden lg:inline w-4 h-4 text-black bg-white p-5"/>   */}
+          <AiOutlineSearch className=" lg:inline w-4 h-4 text-white bg-inherit p-5"/>  
           <input
             type="text"
             className="outline-none border text-black p-2 "
