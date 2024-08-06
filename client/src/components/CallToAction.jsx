@@ -10,9 +10,6 @@ const CallToAction = () => {
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kdPxheeDF4g?si=A5CuY8krjjeoVYLi" allowfullscreen></iframe>
 </div>
         </Container>
-        <Container>
-
-        </Container>
         <h2 className="text-2xl text-black">Want to learn more about Javascript: Typescript? && Python?</h2>
         <p className="text-gray-500 my-2 text-black">Checkout these resources with my JavaScript & Typescript Projects and django framework</p>
         <button className="rounded-bl-none bg-gradient-to-r focus:outline from-gray-500 via-slate-500 to-gray-800 rounded-lg text-white p-2 text-black"> <a  href="/myprojects" target="_blank" rel="noopener noreferrer"> Click to View!!!!! My Javascript/Typescript && django Projects</a></button>

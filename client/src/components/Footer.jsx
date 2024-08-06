@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsDribbble, BsFacebook,BsWhatsapp, BsGithub, BsInstagram, BsTwitter} from "react-icons/bs";
+import LinksComponent from './linkNave';
 
-const Footer = () => {
+const Footer = ({icon,url}) => {
   return (
     <footer className='border border-t-8 border-teal-600'>
       <div className="w-full max-w-7xl mx-auto">
@@ -65,9 +66,12 @@ const Footer = () => {
             {<BsFacebook/>}
             {<BsInstagram/>}
             {<BsTwitter/>}
-            <a href="https://github.com/Muasa-harman" target="_blank" rel="noopener noreferrer">
-            {<BsGithub/>} 
-              </a>
+            {/* <LinksComponent icon={} url="https://github.com/Muasa-harman"> */}
+            <BsGithub
+            // <a href="https://github.com/Muasa-harman" target="_blank" rel="noopener noreferrer"/>
+            />
+            {/* </LinksComponent> */}
+            
             {<BsDribbble/>}
             {<BsWhatsapp/>}
           </div>

@@ -51,10 +51,10 @@ export const Header = () => {
       </Link>
       <form onSubmit={handleSubmit} className="flex ">
         <div className="flex items-center">
-          <AiOutlineSearch className="hidden lg:inline w-4 h-4 text-black bg-white relative p-5"/>
+          {/* <AiOutlineSearch className="hidden lg:inline w-4 h-4 text-black bg-white p-5"/>   */}
           <input
             type="text"
-            className="outline-none border text-black p-2 absolute"
+            className="outline-none border text-black p-2 "
             placeholder="Search..."
             value={searchTerm}
             onChange={(e)=>setSearchTerm(e.target.value)}
