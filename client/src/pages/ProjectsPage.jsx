@@ -5,7 +5,7 @@ import Hotel from "../assets/kigali.jpg"
 import Finance from "../assets/dashboard.jpg"
 import Property from "../assets/Listing.jpg"
 import Delivery from "../assets/landing.png"
-import Waste from "../assets/waste.jpg"
+import Ecommerce from "../assets/Ecommerce.png"
 import Dashboard from "../assets/Dashboard.png"
 import POS from "../assets/POS.png"
  
@@ -20,7 +20,7 @@ const ProjectsPage = () => {
                 <ProjectCard title={"Financial Graphs Dashboard"} image={Finance} link={"https://yala-finance-dashboard-demo.vercel.app/"}/>
                 <ProjectCard title={"Property management System"}  image={Property} link={"https://property-management-rh6h.onrender.com/"}/>
                 <ProjectCard title={"Food Delivery Application"}  image={Delivery} link={"https://donfiles-online-food-delivery-app.onrender.com"}/>
-                <ProjectCard title={"Waste Management System comming soon!!"}  image={Waste}/>
+                <ProjectCard title={"E-commerce shop application"}  image={Ecommerce} link={'https://next-js-ecommerce-bspt103t6-yala-finance-dashboards-projects.vercel.app/'}/>
                 <ProjectCard title={"Work in Progress"}  image={Property}/>
                 <ProjectCard title={"Data Dashboard"}  image={Dashboard} link={"https://savanna-test-beta.vercel.app/"}/>
                 <ProjectCard title={"POS System"}  image={POS} link={"https://pointofsalesystem-pos.onrender.com/"}/>
