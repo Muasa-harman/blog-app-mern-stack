@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.12",
     "@reduxjs/toolkit": "^2.0.1",
     "bootstrap": "^5.3.3",
+    "caniuse-lite": "^1.0.30001660",
     "coffeescript": "^2.7.0",
     "firebase": "^10.7.2",
     "gulp-header": "^2.0.9",

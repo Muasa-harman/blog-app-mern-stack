@@ -8,6 +8,7 @@ import Delivery from "../assets/landing.png"
 import Ecommerce from "../assets/Ecommerce.png"
 import Dashboard from "../assets/Dashboard.png"
 import POS from "../assets/POS.png"
+import Harman from "../assets/harman.png"
  
 const ProjectsPage = () => {
   return (
@@ -24,6 +25,7 @@ const ProjectsPage = () => {
                 <ProjectCard title={"Work in Progress"}  image={Property}/>
                 <ProjectCard title={"Data Dashboard"}  image={Dashboard} link={"https://savanna-test-beta.vercel.app/"}/>
                 <ProjectCard title={"POS System"}  image={POS} link={"https://pointofsalesystem-pos.onrender.com/"}/>
+                <ProjectCard title={"ECommerce"}  image={Harman} link={"https://savanna-test-beta.vercel.app/"}/>
             </div>
             {/* <Link to={'/search'} className="text-lg text-teal-500 hover:underline text-center">View all posts</Link> */}
             </div>
