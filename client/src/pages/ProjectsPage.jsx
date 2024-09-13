@@ -25,7 +25,7 @@ const ProjectsPage = () => {
                 <ProjectCard title={"Work in Progress"}  image={Property}/>
                 <ProjectCard title={"Data Dashboard"}  image={Dashboard} link={"https://savanna-test-beta.vercel.app/"}/>
                 <ProjectCard title={"POS System"}  image={POS} link={"https://pointofsalesystem-pos.onrender.com/"}/>
-                <ProjectCard title={"ECommerce"}  image={Harman} link={"https://savanna-test-beta.vercel.app/"}/>
+                <ProjectCard title={"ECommerce"}  image={Harman} link={"https://online-shopping-6kmvu74q3-yala-finance-dashboards-projects.vercel.app/"}/>
             </div>
             {/* <Link to={'/search'} className="text-lg text-teal-500 hover:underline text-center">View all posts</Link> */}
             </div>
