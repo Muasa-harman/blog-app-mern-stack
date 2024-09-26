@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/dist/
+    command: npm start
+    networks:
+      - myapp-network
+
+  client:
+    build: ./client
+    ports:
+      - "5173:5173" # Map Vite's default port 5173
+    volumes:
+      - ./client:/app
+    command: npm run dev -- --host # Ensure Vite listens on all interfaces
+    networks:
+      - myapp-network
+
+networks:
+  myapp-network:
+    driver: bridge

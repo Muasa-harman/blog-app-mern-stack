@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- <script>
+      fetch('https://gist.github.com/Muasa-harman/f867f78af89247ab16d6d2781865582a.js')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('repo-info').innerHTML = `
+            <h3><a href="${data.html_url}">${data.full_name}</a></h3>
+            <p>${data.description}</p>
+            <p>Forked from: <a href="${data.parent.html_url}">${data.parent.full_name}</a></p>
+            <p>Stars: ${data.stargazers_count} | Forks: ${data.forks_count}</p>
+          `;
+        });
+    </script> -->
+    <!-- <script src="https://gist.github.com/Muasa-harman/f867f78af89247ab16d6d2781865582a.js"></script> -->
     <script type="module" src="/src/main.jsx"></script>
+    
   </body>
 </html>
