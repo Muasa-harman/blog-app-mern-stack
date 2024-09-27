@@ -23,35 +23,3 @@ CMD ["npm", "run", "dev", "--", "--host"]
 
 
 
-
-
-
-
-
-# # client/Dockerfile
-
-# # Use an official Node.js runtime as the parent image for building the frontend
-# FROM node:v20.11.1
-
-
-# # Set the working directory inside the container
-# WORKDIR /blog-app-mern-stack/client
-
-# # Copy package.json and package-lock.json files
-# COPY package*.json ./
-
-# # Install client dependencies
-# RUN npm install
-
-# # Copy the client source code
-# COPY . .
-
-# # Build the client app
-# RUN npm run build
-
-# # Use a lightweight Nginx image to serve the frontend build
-# FROM nginx:alpine
-# COPY --from=0 /usr/src/app/build /usr/share/nginx/html
-
-# # Expose the port Nginx will run on (e.g., 80)
-# EXPOSE 80

@@ -13,10 +13,10 @@ services:
   client:
     build: ./client
     ports:
-      - "5173:5173" # Map Vite's default port 5173
+      - "5173:5173"
     volumes:
       - ./client:/app
-    command: npm run dev -- --host # Ensure Vite listens on all interfaces
+    command: npm run dev -- --host 
     networks:
       - myapp-network
 
