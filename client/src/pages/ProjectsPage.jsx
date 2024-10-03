@@ -15,7 +15,7 @@ const ProjectsPage = () => {
     <div>
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl font-semibold text-center">Recent Projects</h2>
+            <h2 className="text-2xl font-semibold text-center">Recent Projects.</h2>
             <div className="flex flex-wrap gap-4 justify-center">
                 <ProjectCard title={"My blog in Nextjs work in progress"}  image={Harman} target='_blank' rel='noopenernoreferrer' link={"https://harman-muasa-blog-in-next-js.vercel.app/"}/>
                 <ProjectCard title={"Data Dashboard"} target='_blank' rel='noopenernoreferrer' image={Dashboard} link={"https://savanna-test-beta.vercel.app/"}/>
