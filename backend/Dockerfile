@@ -1,6 +1,6 @@
 # backend/Dockerfile
 
-# Use an official Node.js runtime as a parent image
+# Use Node.js runtime as a parent image
 FROM node:20.11.1
 
 # Set the working directory inside the container
